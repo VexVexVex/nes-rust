@@ -15,7 +15,7 @@ struct PPU {
     temp_vram: u16,
     x_scroll: u8,
     write: bool,
-    even_odd: bool
+    even_odd: bool,
     register: u8,
 
     // NMI flags
@@ -36,7 +36,7 @@ struct PPU {
     sprite_patterns: [u32; 8],
     sprite_positions: [u8; 8],
     sprite_priorities: [u8; 8],
-    sprite_indexes: [u8]
+    sprite_indexes: [u8],
 
     // $2000 PPUCTRL
     flag_name_table: u8,
@@ -54,11 +54,11 @@ struct PPU {
     show_spr: bool,
     red_tint: bool,
     green_tine: bool,
-    blue_tint: bool
+    blue_tint: bool,
 
     // $2002 PPUSTATUS
     spr_zero_hit: u8,
-    spr_overflow: u8
+    spr_overflow: u8,
 
     // $2003 OAM Address
     oam_address: u8,
